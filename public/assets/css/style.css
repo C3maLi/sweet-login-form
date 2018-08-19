@@ -1,0 +1,117 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: 'Cabin';
+  font-size: 14px;
+  background: linear-gradient(135deg, #f4837d 0%, #52a5e8 100%);
+}
+
+.container {
+  max-width: 990px;
+}
+
+.container .login-screen-container {
+  height: 100vh;
+}
+.container .login-screen {
+  width: 100%;
+  background-color: #27363b;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 0.7s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.container .login-screen .form-control {
+  background-color: transparent;
+  border: 1px solid #f2847e;
+  border-image: linear-gradient(135deg, #f2847e 0%, #8bcbd3 100%);
+  border-image-slice: 1;
+  color: #ddd;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 20px;
+}
+.container .login-screen .form-control:focus {
+  box-shadow: none;
+}
+
+.container .login-screen button {
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 15px;
+  transition: all 0.2s linear;
+  background: #f2847e;
+  background-image: linear-gradient(135deg, #f2847e 0%, #8bcbd3 100%);
+  position: relative;
+  z-index: 1;
+}
+.container .login-screen button span {
+  display: block;
+  position: relative;
+  z-index: 9;
+}
+.container .login-screen button::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, #8bcbd3 0%, #f2847e 100%);
+  transition: all 0.3s ease-out;
+  z-index: 0;
+  opacity: 0;
+}
+
+.container .login-screen button:hover::after {
+  opacity: 1;
+}
+
+.container .login-screen.login-form .bg {
+  background: url(../imgs/login-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 50px;
+  position: relative;
+}
+
+.container .login-screen.login-form .bg::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.container .login-screen.login-form .new-account {
+  width: 250px;
+  position: relative;
+  z-index: 9;
+}
+.container .login-screen.login-form .form {
+  padding: 10% 12%;
+}
+.container .login-screen.login-form .form h2 {
+  color: #f4837d;
+}
