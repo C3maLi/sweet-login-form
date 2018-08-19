@@ -9,6 +9,14 @@ html {
   font-size: 14px;
   background: linear-gradient(135deg, #f4837d 0%, #52a5e8 100%);
 }
+a {
+  color: #f4837d;
+  transition: color 0.2s ease;
+}
+a:hover {
+  text-decoration: none;
+  color: #52a5e8;
+}
 
 .container {
   max-width: 990px;
@@ -24,13 +32,13 @@ html {
   border-radius: 10px;
   overflow: hidden;
   opacity: 0;
-  animation: fadeIn 0.7s ease both;
+  animation: fadeInUp 0.7s ease both;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 15%, 0);
   }
   to {
     opacity: 1;
